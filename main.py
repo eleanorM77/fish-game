@@ -6,5 +6,5 @@ from pygame.locals import *
 pygame.init()
 
 #set window size
-screen_info = pygame.display.info()
+screen_info = pygame.display.Info()
 size = (width, height) = (int(screen_info.current_w), int(screen_info.current_h))

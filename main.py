@@ -1,1 +1,3 @@
-imp
+import pygame
+pygame.init()
+

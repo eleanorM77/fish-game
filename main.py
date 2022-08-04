@@ -18,9 +18,11 @@ color = (0,127,255)
 
 #definining main
 def main():
-  pass
+  clock.tick(60)
+  screen.fill(color)
+  pygame.display.flip()
 
 
 #calling main
-if __name__ == __main__:
+if __name__ == '__main__':
   main()

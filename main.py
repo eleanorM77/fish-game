@@ -16,6 +16,11 @@ clock = pygame.time.Clock()
 #set up color
 color = (0,127,255)
 
+#load fish image
+fish_image = pygame.image.load("fish.png")
+fish_image = pygame.transform.smoothscale(fish_image,(80,80))
+fish_rect = fish_image.get_rect()
+
 #definining main
 def main():
   clock.tick(60)

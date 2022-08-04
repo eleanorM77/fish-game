@@ -27,12 +27,18 @@ rotation = random.randint(0,360)
 speed.rotate_ip(rotation)
 fish_image = pygame.transform.rotate(fish_image, 180-rotation)
 
+#defining move_fish
+def move_fish():
+  fish_rect.move_ip(speed)
+
 #definining main
 def main():
-  clock.tick(60)
-  screen.fill(color)
-  screen.blit(fish_image, fish_rect)
-  pygame.display.flip()
+  while True:
+    clock.tick(60)
+    move_fish()
+    screen.fill(color)
+    screen.blit(fish_image, fish_rect)
+    pygame.display.flip()
 
 
 #calling main

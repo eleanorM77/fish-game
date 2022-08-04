@@ -1,5 +1,5 @@
 #import pygame
-import sys, pygame
+import sys, pygame, random
 from pygame.locals import *
 
 #initiate pygame
@@ -21,10 +21,17 @@ fish_image = pygame.image.load("fish.png")
 fish_image = pygame.transform.smoothscale(fish_image,(80,80))
 fish_rect = fish_image.get_rect()
 
+#setting up fish movement
+speed = pygame.math.Vector2(0,10)
+rotation = random.randint(0,360)
+speed.rotate_ip(rotation)
+fish_image = pygame.transform.rotate(fish_image, 180-rotation)
+
 #definining main
 def main():
   clock.tick(60)
   screen.fill(color)
+  screen.blit(fish_image, fish_rect)
   pygame.display.flip()
 
 
